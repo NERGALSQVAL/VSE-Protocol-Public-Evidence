@@ -1,33 +1,138 @@
-VSE Protocol Proprietary License
+VSE PROTOCOL PROPRIETARY LICENSE
 All Rights Reserved
 
-Copyright (c) 2026 NERGALSQVAL
+Copyright (c) 2026 Tamás Varga ("NERGAL") / VSE Protocol
+All rights reserved.
 
-This software, its source code, its structure, its design, its protocol logic,
-its documentation, and all associated files (collectively, the "VSE Protocol")
-are proprietary and confidential.
+1. OWNERSHIP
 
-No person or entity is permitted to:
+All source code, object code, software, smart contracts, backend services, frontend components, databases, database schemas, APIs, implementations, protocol specifications, verification logic, audit logic, documented methodologies, documentation, designs, graphics, interfaces, branding, names, slogans, specifications, test materials, deployment materials, configuration structures, and all other original materials contained in or distributed with the VSE Protocol project (collectively, the "VSE Materials") are proprietary and are owned by their applicable lawful VSE rights holder, except where a specific third-party component is explicitly identified as being governed by a separate license.
 
-- use
-- copy
-- modify
-- merge
-- publish
-- distribute
-- sublicense
-- sell
-- reverse engineer
-- decompile
-- reproduce
-- or create derivative works
+For the avoidance of doubt, this license protects the VSE Materials as fixed implementations, expressions, documentation, software, architecture, and protected know-how to the extent recognized by applicable law. Nothing in this license purports to create exclusive rights in abstract ideas, facts, mathematical principles, or methods that applicable law does not protect as proprietary subject matter.
 
-of any part of the VSE Protocol, in whole or in part, for any purpose,
-including commercial, academic, research, or private use, without explicit
-written permission from the copyright holder.
+No ownership rights are transferred by possession of, access to, viewing of, testing of, or authorized use of the VSE Materials.
 
-Any unauthorized use of the VSE Protocol is strictly prohibited and will be
-subject to legal action under applicable intellectual property laws.
+2. NO OPEN-SOURCE GRANT
 
-The VSE Protocol is provided strictly for private, non-transferable review
-purposes only. No rights are granted.
+This repository and the VSE Materials are NOT open-source software.
+
+No rights are granted under any open-source license by publication, hosting, distribution, repository visibility, source availability, or access to the VSE Materials.
+
+Public or private availability of source code does not constitute permission to copy, modify, use, reproduce, redistribute, commercialize, sublicense, reverse engineer, or create derivative works.
+
+3. RESTRICTIONS
+
+Without prior written authorization from the applicable VSE rights holder, you may not:
+
+- copy or reproduce the VSE Materials, in whole or in part;
+- modify, adapt, translate, refactor, port, or create derivative works;
+- distribute, publish, upload, mirror, sublicense, sell, lease, rent, lend, or otherwise transfer the VSE Materials;
+- use the VSE Materials to build or operate a competing product, protocol, network, service, platform, or verification system;
+- use the VSE Materials for commercial purposes;
+- use the VSE Materials in software-as-a-service, hosted, managed, or embedded products;
+- reverse engineer, decompile, disassemble, or attempt to derive protected implementation details from compiled or deployed components, except where such restriction is prohibited by mandatory law;
+- remove, obscure, modify, or falsify copyright, ownership, attribution, trademark, protocol, version, audit, or licensing notices;
+- use the names "VSE", "VSE Protocol", "I AM THE MATH.", "VERIFY. PROVE. RETIRE.", or confusingly similar identifiers in connection with an unauthorized product, service, protocol, network, or commercial activity, to the extent such use is restricted by applicable law;
+- claim authorship, ownership, partnership, endorsement, certification, accreditation, or authorization by VSE Protocol or its lawful rights holder without written permission;
+- use any part of the VSE Materials to train, fine-tune, benchmark, replicate, or derive a competing proprietary system without written authorization;
+- extract, reproduce, or reuse protected VSE implementations, documentation, protocol specifications, anti-fraud logic, verification architecture, proof structure, audit architecture, or non-public know-how for an unauthorized competing system.
+
+4. LIMITED AUTHORIZED ACCESS
+
+Access granted for evaluation, testing, integration, security review, demonstration, partnership assessment, buyer assessment, producer onboarding, or other approved purposes is limited strictly to the purpose expressly authorized by VSE Protocol or the applicable VSE rights holder.
+
+Such access does not grant:
+
+- ownership;
+- a commercial license;
+- redistribution rights;
+- sublicensing rights;
+- derivative-work rights;
+- rights to reuse the VSE architecture in another product;
+- rights to disclose confidential or non-public technical information.
+
+Any authorization may be subject to separate written terms, agreements, access controls, or technical restrictions.
+
+5. CONTRIBUTIONS
+
+Unless otherwise agreed in a separate written agreement, submission of code, documentation, designs, fixes, ideas, specifications, or other contributions to the VSE Protocol project does not grant the contributor any ownership interest in pre-existing VSE Materials, VSE branding, the VSE platform, or other rights owned by VSE.
+
+Submission alone also does not automatically transfer ownership of the contributor's original contribution to VSE.
+
+No contribution may be incorporated into the VSE Protocol project unless VSE has the legal right to use, modify, distribute, and otherwise exploit that contribution under an applicable written license, assignment, contributor agreement, employment agreement, contractor agreement, or other legally sufficient authorization.
+
+6. THIRD-PARTY COMPONENTS
+
+The VSE Materials may rely on third-party libraries, frameworks, tools, standards, services, APIs, or other components that are governed by their own licenses or terms.
+
+This proprietary license does not override third-party licenses.
+
+Where required, applicable third-party notices and licenses remain in force for those specific components only.
+
+No third-party license shall be interpreted as granting rights to VSE-owned source code, branding, implementations, documentation, protected know-how, or other proprietary VSE Materials beyond the scope required by the relevant third-party license.
+
+7. TRADEMARKS AND BRANDING
+
+VSE claims proprietary rights in its names, marks, slogans, logos, visual identities, product names, protocol names, and branding to the extent protected by applicable law.
+
+No trademark, branding, endorsement, sponsorship, or affiliation rights are granted under this license.
+
+Nothing in this license represents that any particular VSE name, slogan, logo, or mark is registered unless expressly stated otherwise.
+
+8. CONFIDENTIAL AND SECURITY-SENSITIVE MATERIAL
+
+Materials intentionally published in a public VSE repository are not deemed confidential merely because they are covered by this proprietary license. Public availability, however, does not grant any license or permission beyond what is expressly stated in writing.
+
+Private keys, API secrets, passwords, tokens, non-public internal endpoints, deployment credentials, signing keys, cryptographic secrets, non-public infrastructure details, security procedures, unreleased technical materials, and other confidential or security-sensitive information remain protected and are not licensed for public use or redistribution.
+
+Unauthorized disclosure, publication, exploitation, or use of non-public or unlawfully obtained sensitive material may result in immediate access revocation and any remedies available under applicable law or contract.
+
+9. NO WARRANTY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE VSE MATERIALS ARE PROVIDED "AS IS" AND "AS AVAILABLE" FOR ANY AUTHORIZED EVALUATION, DEVELOPMENT, OR TESTING PURPOSE.
+
+VSE PROTOCOL AND THE APPLICABLE VSE RIGHTS HOLDER DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AVAILABILITY, ACCURACY, SECURITY, OR ERROR-FREE OPERATION.
+
+10. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, VSE PROTOCOL AND THE APPLICABLE VSE RIGHTS HOLDER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE, OR CONSEQUENTIAL DAMAGES, LOSS OF PROFITS, LOSS OF DATA, LOSS OF BUSINESS, LOSS OF REVENUE, OR INTERRUPTION ARISING FROM ACCESS TO OR USE OF THE VSE MATERIALS.
+
+11. UNAUTHORIZED USE
+
+Any unauthorized copying, reproduction, distribution, modification, commercial use, disclosure, circumvention, competing implementation, or exploitation of protected VSE Materials constitutes a violation of this license and may also violate applicable copyright, trade secret, trademark, contract, unfair competition, computer misuse, or other laws.
+
+VSE Protocol and the applicable VSE rights holder reserve all available legal and equitable remedies.
+
+12. TERMINATION
+
+Any permission or limited authorization granted to a user or organization automatically terminates upon violation of this license or any applicable written agreement, subject to any mandatory legal requirements to the contrary.
+
+Upon termination, unauthorized use must cease immediately, and copies of VSE Materials must be deleted or returned where legally or contractually required.
+
+13. NO IMPLIED RIGHTS
+
+No license, right, permission, waiver, consent, or authorization is granted by implication, estoppel, repository access, disclosure, publication, silence, or otherwise.
+
+All rights not expressly granted in a separate written agreement are reserved.
+
+14. GOVERNING TERMS
+
+Additional contractual, confidentiality, commercial, security, partner, buyer, producer, enterprise, or deployment terms may apply separately.
+
+If a separately executed written agreement between an applicable VSE rights holder and an authorized party conflicts with this license, the signed agreement governs solely to the extent of that conflict and solely for the parties covered by that agreement.
+
+15. CONTACT FOR LICENSING
+
+Commercial, integration, redistribution, partnership, or other licensing rights require prior written authorization from the applicable VSE rights holder.
+
+No authorization is valid unless granted in writing by an authorized VSE representative or rights holder.
+
+---
+
+VSE PROTOCOL
+
+"I AM THE MATH."
+
+VERIFY. PROVE. RETIRE.
+
+ALL RIGHTS RESERVED.
