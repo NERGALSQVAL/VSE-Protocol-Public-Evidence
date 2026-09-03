@@ -8,17 +8,35 @@
 
 **VERIFY. PROVE. RETIRE.**
 
-`v1.1.0-beta.1_PROTOCOL` · `TEST-READY` · `NOT PRODUCTION-CERTIFIED`
+![Release](https://img.shields.io/badge/Release-v1.1.0--beta.1_PROTOCOL-16a34a?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Test--Ready-2563eb?style=for-the-badge)
+![Production](https://img.shields.io/badge/Production-Not_Certified-b91c1c?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Proprietary-444?style=for-the-badge)
+
+**Current development release:** `v1.1.0-beta.1_PROTOCOL`  
+**Baseline:** `v1.0.0-beta.1_BASELINE`
 
 </div>
 
 ---
 
+## Start Here
+
+| Document | What it contains |
+|---|---|
+| **[WHITEPAPER.md](WHITEPAPER.md)** | Full technical architecture, proof model, enterprise layer, security and roadmap |
+| **[PROTOCOL.md](PROTOCOL.md)** | Anti-Fraud Whitelist and deterministic network rules |
+| **[ATTESTATION.md](ATTESTATION.md)** | Formal protocol-integrity and verification attestation |
+| **[ABOUT.md](ABOUT.md)** | Plain-language project identity, purpose and positioning |
+| **[LICENSE](LICENSE)** | Proprietary licensing and rights |
+
+---
+
 ## What VSE Does
 
-VSE Protocol is designed to transform authenticated renewable-energy production telemetry into deterministic, auditable, single-use digital energy proofs for enterprise buyers.
+VSE Protocol is designed to transform authenticated renewable-energy production telemetry into deterministic, auditable, single-use digital energy proofs.
 
-VSE is **not** designed as a general-purpose cryptocurrency project. Blockchain is one component of a larger evidence and finality system.
+It is **not** designed as a general-purpose cryptocurrency project. Blockchain is used as part of the registry and finality architecture, not as the source of the energy measurement.
 
 ```text
 PHYSICAL ENERGY ASSET
@@ -27,13 +45,13 @@ MANUFACTURER-AUTHORITATIVE DATA
         ↓
 RAW EVIDENCE
         ↓
-CRYPTOGRAPHIC INTEGRITY
+CRYPTOGRAPHIC FINGERPRINT
         ↓
 DETERMINISTIC VALIDATION
         ↓
 ENERGY CALCULATION
         ↓
-AUDIT CHAIN
+APPEND-ONLY AUDIT CHAIN
         ↓
 VSE UNIT
         ↓
@@ -46,36 +64,27 @@ RETIREMENT
 MACHINE-VERIFIABLE PROOF
 ```
 
-> **NO EVIDENCE = NO VERIFIED UNIT = NO VALID PROOF**
+<div align="center">
+
+## NO EVIDENCE = NO VERIFIED UNIT = NO VALID PROOF
+
+</div>
 
 ---
 
-## Documentation
+## Core Verification Rules
 
-| Document | Purpose |
+| Rule | Meaning |
 |---|---|
-| **[ABOUT](ABOUT.md)** | What VSE is, why it exists, and how it is positioned |
-| **[WHITEPAPER](WHITEPAPER.md)** | Full architecture, proof model, commercial layer, security and roadmap |
-| **[PROTOCOL](PROTOCOL.md)** | Anti-Fraud Whitelist and network validation rules |
-| **[ATTESTATION](ATTESTATION.md)** | Formal protocol integrity and verification attestation |
-| **[WIKI](wiki/Home.md)** | Structured technical knowledge base |
-| **[LICENSE](LICENSE)** | Proprietary licensing terms |
-
----
-
-## Core Principles
-
-| Principle | Meaning |
-|---|---|
-| **Authoritative machine source** | Production evidence must come through an approved machine-authoritative path. |
-| **Raw evidence first** | Source evidence exists before verified state. |
-| **Independent cryptographic integrity** | VSE calculates its own evidence fingerprints. |
-| **Deterministic validation** | The same valid evidence under the same methodology should produce the same result. |
+| **Authoritative machine source** | Production evidence must originate through an approved machine-authoritative path. |
+| **Raw evidence first** | Source evidence is captured before verified state is created. |
+| **Independent hashing** | VSE calculates its own cryptographic fingerprint of received evidence. |
+| **Deterministic validation** | The same valid evidence under the same methodology and version should produce the same result. |
 | **No human override** | Failed mathematical validation cannot be manually converted into valid energy. |
-| **Append-only audit** | New information creates new state instead of silently rewriting old state. |
-| **Zero double use** | The same underlying production must not become new inventory twice. |
+| **Append-only audit** | New information creates new state instead of silently rewriting accepted history. |
+| **Zero double use** | The same production interval must not become new verified inventory twice. |
 | **Final retirement** | A retired VSE Unit must not return to active inventory. |
-| **Machine-verifiable proof** | The final proof is intended to be independently checkable by software. |
+| **Machine-verifiable proof** | Final proof state is designed to be independently checked by software. |
 
 ---
 
@@ -91,9 +100,27 @@ AUTHENTICATED API / OPENAPI
 VSE ORACLE
 ```
 
-VSE does not treat manually entered totals, screenshots, spreadsheets, user-generated CSV claims, edited payloads, or unverifiable third-party totals as primary authoritative production evidence.
+Manual production totals, screenshots, spreadsheets, user-generated CSV claims, edited payloads and unverifiable third-party totals are not treated as primary authoritative evidence.
 
 The current primary manufacturer integration direction is **SOLARMAN paid OpenAPI**.
+
+---
+
+## VSE Unit & Retirement
+
+A **VSE Unit** is a verification instrument, not a freely tradable speculative token.
+
+The intended registry model includes:
+
+- authorized VSE minting only;
+- VSE-controlled registry ownership;
+- no unrestricted public transfer;
+- no open secondary market;
+- duplicate source / interval / audit protection;
+- one-time retirement;
+- no reactivation after final retirement.
+
+> **RETIREMENT IS FINAL.**
 
 ---
 
@@ -105,8 +132,6 @@ The current primary manufacturer integration direction is **SOLARMAN paid OpenAP
 
 </div>
 
-A commercial relationship, administrator, buyer, producer, partner, or reviewer must not be able to convert mathematically invalid machine evidence into valid production.
-
 ```text
 IF VALIDATION PASSES
     → CONTINUE
@@ -115,72 +140,18 @@ IF VALIDATION FAILS
     → REJECT
 ```
 
+No administrator, buyer, producer, reviewer, partner or commercial relationship may convert mathematically failed evidence into valid VSE energy.
+
 > **ADMINISTRATIVE PRIVILEGE ENDS WHERE MATHEMATICAL VERIFICATION BEGINS.**
 
 ---
 
-## VSE Unit
+## Audit Principle
 
-A VSE Unit is a **verification instrument**, not a freely tradable speculative token.
-
-The intended registry model includes authorized VSE minting, VSE-controlled ownership, no unrestricted public transfer, no open secondary market, duplicate prevention, one-time retirement, and no reactivation after final retirement.
-
-Blockchain supports registry state and finality. It is **not** the source of the renewable-energy measurement.
-
----
-
-## Producer Experience
-
-```text
-REGISTER
-    ↓
-ACCEPT TERMS
-    ↓
-SELECT MANUFACTURER
-    ↓
-SHARE OFFICIAL ACCESS
-    ↓
-PENDING_SHARE
-    ↓
-CHECKING
-    ↓
-ONLINE
-    ↓
-AUTOMATED COLLECTION
-```
-
-Producers do not need MetaMask, blockchain knowledge, manual smart-contract interaction, or manual production reporting.
-
----
-
-## Buyer Experience
-
-```text
-BUYER REQUEST
-    ↓
-ELIGIBLE VERIFIED INVENTORY
-    ↓
-ALLOCATION
-    ↓
-RETIREMENT
-    ↓
-SIGNED PROOF
-    ↓
-API / PUBLIC VERIFICATION
-```
-
-The enterprise layer is designed around organizations, contracts, subscriptions, API access, usage metering, billing, SLA controls, webhooks, allocation, retirement, and proof retrieval.
-
-Commercial terms must not alter mathematical validity.
-
----
-
-## Audit Rule
-
-> ## NEW INFORMATION CREATES NEW STATE.  
+> ## NEW INFORMATION CREATES NEW STATE.
 > ## IT DOES NOT REWRITE OLD STATE.
 
-Corrections, investigations, exclusions, and security actions should create new auditable events instead of silently modifying accepted historical evidence.
+Corrections, investigations, exclusions and security actions create new auditable state instead of silently rewriting accepted historical evidence.
 
 ---
 
@@ -188,16 +159,15 @@ Corrections, investigations, exclusions, and security actions should create new 
 
 | Field | Value |
 |---|---|
-| Current development release | `v1.1.0-beta.1_PROTOCOL` |
-| Baseline release | `v1.0.0-beta.1_BASELINE` |
-| Status | Test-ready development release |
+| Current release | `v1.1.0-beta.1_PROTOCOL` |
+| Baseline | `v1.0.0-beta.1_BASELINE` |
+| Development state | **Test-ready** |
 | Production certification | **Not production-certified** |
+| Evidence model | Machine-verifiable renewable-energy evidence |
 
 The baseline release remains immutable. New development proceeds through separately versioned releases.
 
-Production readiness requires validation of the actual deployed environment, including manufacturer API connectivity, live source telemetry, production database and secret management, signer deployment, smart-contract deployment, mint and retirement testing, proof verification, recovery, access controls, infrastructure hardening, and applicable security/legal review.
-
-External review may assess implementation or operating environment. It does **not** override the mathematical validity of an individual VSE proof.
+External technical, security or legal review may assess the implementation and operating environment. It does **not** determine or override the mathematical validity of an individual VSE proof.
 
 ---
 
@@ -207,15 +177,31 @@ VSE does not claim, solely by operation of this software, to be an official Guar
 
 VSE is currently positioned as **machine-verifiable renewable-energy evidence and data infrastructure**.
 
-Buyer acceptance and regulatory treatment depend on the applicable legal, contractual, accounting, reporting, and assurance framework.
+Buyer acceptance and regulatory treatment depend on the applicable legal, contractual, accounting, reporting and assurance framework.
 
 ---
 
-## Repository License
+## Repository Layout
+
+```text
+VSE-Protocol-Public-Evidence/
+├── README.md
+├── ABOUT.md
+├── WHITEPAPER.md
+├── PROTOCOL.md
+├── ATTESTATION.md
+└── LICENSE
+```
+
+No application source code, credentials, private keys or production secrets belong in this public evidence repository.
+
+---
+
+## License
 
 This repository is **proprietary and not open source** unless a specific component explicitly states otherwise.
 
-Public visibility does not grant permission to copy, modify, commercialize, redistribute, or reuse protected VSE Materials.
+Public visibility does not grant permission to copy, modify, redistribute, commercialize or reuse protected VSE Materials.
 
 See **[LICENSE](LICENSE)**.
 
